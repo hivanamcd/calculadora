@@ -1,12 +1,13 @@
 language: java
-script: mvn package -Popenshift
+script: 
+- mvn package -Popenshift
+- git checkout 539342274382ecce120002dd@calculadora-hivanah.rhcloud.com/~/git/calculadora.git
+- git add . 
+- git config --global user.email "hivanapd@gmail.com"
+- git config --global user.name "hivanamcd"
+- git config --global user.name "hivana1"
+- git commit -a -m "commit"
+- git push origin master
 
-deploy:
-  provider: openshift
-  user: hivanamaced@gmail.com
-  password:
-    secure: c0rD3+bcKwCQmOtlK9ALUYbpf1M0lpSEoK7SxTwuJElkPeSsFEjDAmqvsl3w6vPyDsKm8nDLBU/Ge6m2UFx3cv/shHhnje8b1AJMUxR/1da//u9d7ndZnMiXZNWqr/xya6zdJUx3kCF8K00DZuXqda+atuivZrF28IMKqYK+eM8=
-  app: calculadora
-  domain: hivanah
-  on:
-    repo: hivanamcd/calculadora
+
+
