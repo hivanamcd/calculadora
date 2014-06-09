@@ -1,6 +1,7 @@
 language: java
 script: 
 - mvn package -Popenshift
+- rhc apps --token bc282a3d95b04784e1d20994499862a14bc35875dbfcbbf1544e8c10bb25d1c3
 
 deploy:
   provider: openshift
