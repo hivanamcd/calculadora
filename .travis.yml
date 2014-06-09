@@ -1,5 +1,6 @@
 language: java
 script: mvn package -Popenshift
+
 deploy:
   provider: openshift
   user: hivanamaced@gmail.com
